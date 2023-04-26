@@ -6,13 +6,13 @@ import Form from './Form.js';
 
 
 export default function Body() {
-  const teamArray = [];
+  const teamLogos = [];
 
 
   return (
 
     <div className={styles.body}>
-      <Facts teamArray={teamArray}/>
+      <Facts teamLogos={teamLogos}/>
       <Form />
     </div>
 

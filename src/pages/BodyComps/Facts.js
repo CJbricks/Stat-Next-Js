@@ -5,12 +5,13 @@ import { Box, Flex, Text, Center, Image } from '@chakra-ui/react';
 
 
 export default function Facts(props) {
+
   return (
     <>
-    <Flex w="50%" border="1px solid red">
+    <Flex w="70%" border="1px solid red">
       <Box w="100%" bg="blue.50">
-        <div>Teams played for:
-          { props.teamArray.map((image) => (
+        <Text>Teams played for:</Text>
+          { props.teamLogos.map((image) => (
             <Image
             key="image"
             src={image}
@@ -19,7 +20,7 @@ export default function Facts(props) {
             />
           ))
           }
-        </div>
+       
       </Box>
       <Box>
         <div>Best seasons played</div>
