@@ -28,7 +28,7 @@ export default function Form() {
 
   return (
     <>
-    <Flex>
+    <Flex w="100%" ml={['20%', '40%', '60%']}>
       <Box>
         <FormControl>
           <FormLabel>Who Is It?</FormLabel>
@@ -37,7 +37,7 @@ export default function Form() {
            size="md"
            onChange={(e) => setGuess(e.target.value)}
            id="guess"
-           placeHolder="First Name, Last Name" />
+           placeholder="First Name, Last Name" />
           <Button
           variant="outline"
           colorScheme="red"

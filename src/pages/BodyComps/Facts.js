@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '@/styles/Forms.module.css';
-import { Box, Flex, Text, Center, Image } from '@chakra-ui/react';
+import { Box, Flex, Text, Center } from '@chakra-ui/react';
+import Image from 'next/image'
+
 
 
 
@@ -8,25 +10,27 @@ export default function Facts(props) {
 
   return (
     <>
-    <Flex w="70%" border="1px solid red">
-      <Box w="100%" bg="blue.50">
-        <Text>Teams played for:</Text>
-          { props.teamLogos.map((image) => (
-            <Image
-            key="image"
-            src={image}
-            width={30}
-            height={60}
-            />
-          ))
-          }
+    <Flex flexWrap="wrap" w="100%" border="1px solid red" m={10}>
+      <Box flexWrap="wrap" w="100%" bg="blue.50" display="inline-flex">
+        <Text
+          fontSize={['1em', '1.2em', '2em']}
+          fontWeight={600}>Teams:</Text>
+            { props.teamLogos.map((logo) => (
+                <Image
+                key="logo"
+                src={logo}
+                width={80}
+                height={80}
+                alt="team-logo" />
+            ))
+            }
        
       </Box>
       <Box>
-        <div>Best seasons played</div>
+        <div>Statsheet</div>
       </Box>
       <Box>
-        <div>Awards and facts</div>
+        <div>Awards and etc</div>
       </Box>
         
        
