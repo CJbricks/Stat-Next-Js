@@ -1,0 +1,7 @@
+.statsheet {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    object-fit: fill;
+    border: 1px solid red;
+}

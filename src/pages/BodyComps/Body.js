@@ -16,10 +16,12 @@ export default function Body() {
 
   return (
 
-    <div className={styles.body}>
-      <Facts teamLogos={teamLogos}/>
-      <Form />
-    </div>
+    <>
+      <div className={styles.body}>
+        <Facts teamLogos={teamLogos}/>
+        <Form />
+      </div>
+    </>
 
   )
 }
