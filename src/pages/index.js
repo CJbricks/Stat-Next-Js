@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css';
 import Body from './BodyComps/Body.js';
-import Header from './HeaderComps/Header.js';
+import Navbar from './HeaderComps/Navbar.js';
 import Footer from './BodyComps/Footer.js';
 import { Center } from '@chakra-ui/react';
 
@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Header />
+      <Navbar />
         <Body />
       <Footer />
       
