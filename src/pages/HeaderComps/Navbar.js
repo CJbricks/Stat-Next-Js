@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.900')} px={4} mt={2}>
+      <Box bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.900')} p={4} mt={2}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'lg'}
@@ -42,7 +42,7 @@ export default function Navbar() {
           <HStack spacing={8} alignItems={'center'}>
             <Box p={[0, 0, 4]}>
               <Image 
-                src='/Images/sizedlogo.png' 
+                src='/images/sizedlogo.png' 
                 alt='navbar-logo-sm'
                 width={20}
                 height={20}
