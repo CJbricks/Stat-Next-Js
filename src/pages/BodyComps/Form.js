@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Icon, Image, FormControl, FormLabel, Flex, Box, Text, Button, Input, Container, Hide, useColorModeValue, Wrap, WrapItem, Heading, VStack, HStack, IconButton, InputGroup, InputLeftElement, Textarea } from '@chakra-ui/react';
+import { Icon, Link, Image, FormControl, FormLabel, Flex, Box, Text, Button, Input, Container, Hide, useColorModeValue, Wrap, WrapItem, Heading, VStack, HStack, IconButton, InputGroup, InputLeftElement, Textarea } from '@chakra-ui/react';
 import {
   MdPhone,
   MdEmail,
@@ -9,6 +9,8 @@ import {
   MdOutlineEmail,
 } from 'react-icons/md';
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { MdSportsBaseball } from "react-icons/md";
+import { GiBaseballGlove, GiBaseballBat } from "react-icons/gi"
 import styles from '@/styles/Forms.module.css';
 import AnswerModal from './AnswerModal.js';
 
@@ -24,14 +26,14 @@ export default function Form() {
   const answer = "evan longoria";
   const [answerKey, setAnswerKey] = useState(false);
 
-  const [revealAvatar, setRevealAvatar] = useState(true)
+  const [revealAvatar, setRevealAvatar] = useState(false)
   
   const checkAnswer = () => {
-    let answerFilter = guess.toLowerCase();
+    
     let passed = "Correct";
     let failed = "Nope";
-    if (answerFilter.replace(/[^a-zA-Z0-9 ]/g, '') === answer) {
-      setAnswerKey(true)
+    if (guess.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase() === answer) {
+      setRevealAvatar(true)
       console.log(passed)
 
     } else {
@@ -42,12 +44,13 @@ export default function Form() {
   const playerID = '/images/assets/playID.png'
   const avatar = '/images/assets/avatar.png'
   const playerName = answer.toUpperCase()
-  const factOne = 'SF';
-  const factTwo = 'Giants';
+  const factOne = '2008 Rookie of The Year';
+  const factTwo = '3 Time All Star';
+  const currentTeam = 'SF Giants'
 
   return (
     <>
-    <Container bg={''} maxW="full" mt={4} centerContent overflow="hidden">
+    <Container bg={''} maxW="full" mt={4} mb={8} centerContent overflow="hidden">
       
         <Flex>
         
@@ -64,17 +67,17 @@ export default function Form() {
               w={'90%'}
               h={'150%'}
               position={'absolute'}
-              top={'-5%'}
+              top={'-15%'}
               left={10}
               zIndex={-1}
               opacity={'80%'}
-              color={'red.500'}
+              color={'orange.500'}
             />
             <Blob
               w={'80%'}
               h={'120%'}
               position={'absolute'}
-              top={'-15%'}
+              top={'-18%'}
               left={-10}
               zIndex={-1}
               
@@ -105,19 +108,21 @@ export default function Form() {
                 src={avatar}
               />
               :
-              <Box pt={2} borderRadius={'5px'} bg={'red.600'} opacity={'85%'}>
-              <Image
-                alt={'player-image'}
-                fit={'fit'}
-                align={'center'}
-                w={'200%'}
-                h={'200%'}
-                src={playerID}
-              />
-              <Heading color={'whiteAlpha.900'} align={'center'} bg={'red.700'} borderRadius={'5px'}>
-              {playerName}
-              </Heading>
-              </Box>
+              
+                <Box pt={2} borderRadius={'5px'} bg={'orange.600'} opacity={'85%'}>
+                  <Image
+                    alt={'player-image'}
+                    fit={'fit'}
+                    align={'center'}
+                    w={'200%'}
+                    h={'200%'}
+                    src={playerID}
+                  />
+                    <Heading color={'whiteAlpha.900'} align={'center'} bg={'orange.700'} borderRadius={'5px'}>
+                    {playerName}
+                    </Heading>
+                </Box>
+             
             }
             </Box>
           
@@ -126,7 +131,7 @@ export default function Form() {
       
        {/* Contact form */}       
         <Box
-          bg="red.500"
+          bg="blue.600"
           color="white"
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 8 }}
@@ -135,12 +140,9 @@ export default function Form() {
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
-                  <Heading textAlign={'center'}>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.200">
-                    Fill out the form or directly contact
-                  </Text>
+                  <Heading textAlign={'center'}>Bonus Stats</Heading>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} alignItems="flex-start">
+                    <VStack pl={0} spacing={3} alignItems="center">
                       <Button
                         size="md"
                         height="48px"
@@ -148,7 +150,7 @@ export default function Form() {
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdPhone color='white' size="20px" />}>
+                        leftIcon={<MdSportsBaseball color='white' size="20px" />}>
                         {factOne}
                       </Button>
                       <Button
@@ -158,7 +160,7 @@ export default function Form() {
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdEmail color='white' size="20px" />}>
+                        leftIcon={<GiBaseballGlove color='white' size="20px" />}>
                         {factTwo}
                       </Button>
                       <Button
@@ -169,7 +171,7 @@ export default function Form() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color='white' size="20px" />}>
-                       San Francisco
+                       {currentTeam}
                       </Button>
                     </VStack>
                   </Box>
@@ -186,6 +188,7 @@ export default function Form() {
                       _hover={{ bg: '#0D74FF' }}
                       icon={<MdFacebook size="28px" />}
                     />
+                    <Link href='https://github.com/cjbricks'>
                     <IconButton
                       aria-label="github"
                       variant="ghost"
@@ -194,6 +197,7 @@ export default function Form() {
                       _hover={{ bg: '#0D74FF' }}
                       icon={<BsGithub size="28px" />}
                     />
+                    </Link>
                     <IconButton
                       aria-label="instagram"
                       variant="ghost"
@@ -218,7 +222,7 @@ export default function Form() {
                           />
                           <Input type="text" size="md"
                           onChange={(e) => {
-                            setName(e.target.value)
+                            setGuess(e.target.value)
                           }} />
                         </InputGroup>
                       </FormControl>
