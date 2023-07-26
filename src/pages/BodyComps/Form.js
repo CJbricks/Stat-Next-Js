@@ -21,8 +21,10 @@ export default function Form() {
   const [guess, setGuess] = useState("")
   console.log(guess)
 
-  const answer = "ian kinsler";
+  const answer = "evan longoria";
   const [answerKey, setAnswerKey] = useState(false);
+
+  const [revealAvatar, setRevealAvatar] = useState(true)
   
   const checkAnswer = () => {
     let answerFilter = guess.toLowerCase();
@@ -37,10 +39,16 @@ export default function Form() {
     }
   }
 
+  const playerID = '/images/assets/playID.png'
+  const avatar = '/images/assets/avatar.png'
+  const playerName = answer.toUpperCase()
+  const factOne = 'SF';
+  const factTwo = 'Giants';
+
   return (
     <>
     <Container bg={''} maxW="full" mt={4} centerContent overflow="hidden">
-        
+      
         <Flex>
         
           {/* Second Blob Image */}
@@ -60,7 +68,7 @@ export default function Form() {
               left={10}
               zIndex={-1}
               opacity={'80%'}
-              color={useColorModeValue('red.400', 'red.300')}
+              color={'red.500'}
             />
             <Blob
               w={'80%'}
@@ -70,12 +78,13 @@ export default function Form() {
               left={-10}
               zIndex={-1}
               
-              color={useColorModeValue('gray.300', 'gray.300')}
+              color={'gray.800'}
             />
             
             {/* Unused attributes
               rounded={'2xl'}
               boxShadow={'2xl'} */}
+          
             <Box
               position={'relative'}
               height={'full'}
@@ -83,20 +92,35 @@ export default function Form() {
               mt={20}
               width={'full'}
               overflow={'hidden'}
-              border='1px solid green'
-
               >
-            
+
+          {/* Conditionally render the player id  */}
+            { !revealAvatar ? 
               <Image
                 alt={'avatar-image'}
                 fit={'fit'}
                 align={'center'}
                 w={'150%'}
                 h={'150%'}
-                src={'/logos/avat-id copy.png'
-                }
+                src={avatar}
               />
+              :
+              <Box pt={2} borderRadius={'5px'} bg={'red.600'} opacity={'85%'}>
+              <Image
+                alt={'player-image'}
+                fit={'fit'}
+                align={'center'}
+                w={'200%'}
+                h={'200%'}
+                src={playerID}
+              />
+              <Heading color={'whiteAlpha.900'} align={'center'} bg={'red.700'} borderRadius={'5px'}>
+              {playerName}
+              </Heading>
+              </Box>
+            }
             </Box>
+          
             </Hide>
           </Flex>
       
@@ -125,7 +149,7 @@ export default function Form() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdPhone color='white' size="20px" />}>
-                        +13032293663
+                        {factOne}
                       </Button>
                       <Button
                         size="md"
@@ -135,7 +159,7 @@ export default function Form() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdEmail color='white' size="20px" />}>
-                        cj.christian.web@gmail.com
+                        {factTwo}
                       </Button>
                       <Button
                         size="md"
@@ -145,7 +169,7 @@ export default function Form() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color='white' size="20px" />}>
-                        Austin, TX
+                       San Francisco
                       </Button>
                     </VStack>
                   </Box>
@@ -186,7 +210,7 @@ export default function Form() {
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name">
-                        <FormLabel>Full Name</FormLabel>
+                        <FormLabel>Player's Name</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                           <InputLeftElement
                             pointerEvents="none"
@@ -198,41 +222,19 @@ export default function Form() {
                           }} />
                         </InputGroup>
                       </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>E-Mail</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input type="text" size="md"
-                          onChange={(e) => {
-                            setEmail(e.target.value)
-                          }} />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Message</FormLabel>
-                        <Textarea
-                          borderColor="gray.300"
-                          _hover={{
-                            borderRadius: 'gray.300',
-                          }}
-                          placeholder="message"
-                          onChange={(e) => {
-                            setMessage(e.target.value)
-                          }}
-                        />
-                      </FormControl>
+                      
+                     
                       <FormControl id="name" float="right">
-                        <Button
-                          variant="solid"
-                          bg="#0D74FF"
-                          color="white"
-                          _hover={{}}
-                          onClick={checkAnswer}>
-                          Send
-                        </Button>
+                        <Box align={'center'}>
+                          <Button
+                            variant="solid"
+                            bg={'gray.800'}
+                            color="white"
+                            _hover={{ bg: 'gray.300' }}
+                            onClick={checkAnswer}>
+                            Guess
+                          </Button>
+                        </Box>
                       </FormControl>
                     </VStack>
                   </Box>
