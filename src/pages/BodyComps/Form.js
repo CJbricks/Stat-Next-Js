@@ -56,8 +56,8 @@ export default function Form() {
               w={'90%'}
               h={'150%'}
               position={'absolute'}
-              top={'-20%'}
-              left={0}
+              top={'-5%'}
+              left={10}
               zIndex={-1}
               opacity={'80%'}
               color={useColorModeValue('red.400', 'red.300')}
@@ -66,8 +66,8 @@ export default function Form() {
               w={'80%'}
               h={'120%'}
               position={'absolute'}
-              top={'-25%'}
-              left={0}
+              top={'-15%'}
+              left={-10}
               zIndex={-1}
               
               color={useColorModeValue('gray.300', 'gray.300')}
@@ -79,18 +79,21 @@ export default function Form() {
             <Box
               position={'relative'}
               height={'full'}
-              p={8}
+              p={'100px'}
+              mt={20}
               width={'full'}
               overflow={'hidden'}
+              border='1px solid green'
+
               >
             
               <Image
-                alt={'Hero Image'}
-                fit={'cover'}
+                alt={'avatar-image'}
+                fit={'fit'}
                 align={'center'}
-                w={'85%'}
-                h={'100%'}
-                src={'/images/nav-logo.png'
+                w={'150%'}
+                h={'150%'}
+                src={'/logos/avat-id copy.png'
                 }
               />
             </Box>
