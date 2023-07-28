@@ -131,7 +131,7 @@ export default function Form() {
       
        {/* Contact form */}       
         <Box
-          bg="blue.600"
+          bg="gray.300"
           color="white"
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 8 }}
@@ -148,7 +148,7 @@ export default function Form() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="#DCE2FF"
+                        color="gray.800"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdSportsBaseball color='white' size="20px" />}>
                         {factOne}
@@ -158,7 +158,7 @@ export default function Form() {
                         height="48px"
                         width="275px"
                         variant="ghost"
-                        color="#DCE2FF"
+                        color="gray.800"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<GiBaseballGlove color='white' size="20px" />}>
                         {factTwo}
@@ -168,7 +168,7 @@ export default function Form() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="#DCE2FF"
+                        color="gray.800"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color='white' size="20px" />}>
                        {currentTeam}
@@ -210,7 +210,7 @@ export default function Form() {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box bg="white" borderRadius="lg">
+                <Box bg="white" borderRadius="lg" mt={[0, 20]}>
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name">

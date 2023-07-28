@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <>
       <Box bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.900')} p={4} mt={2}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex h={16} alignItems={'center'} justifyContent={'center'}>
           <IconButton
             size={'lg'}
             aria-label={'Open Menu'}
@@ -34,7 +34,7 @@ export default function Navbar() {
             bg={useColorModeValue('gray.200', 'gray.200')}
             color={useColorModeValue('alphaBlack.900', 'alphaBlack.900')}
                 _hover={{
-                  bg: 'gray.100',
+                  bg: 'orange.300',
                 }}
             onClick={isOpen ? onClose : onOpen} >
               <BiMenu size='full' /> 
@@ -63,35 +63,34 @@ export default function Navbar() {
                     rounded={'full'}
                     _hover={{
                    textDecoration: 'none',
-                   
-                   bg: useColorModeValue('red.400', 'red.500'),
+                   bg: useColorModeValue('orange.600', 'orange.600'),
                  }}>Home</Link>
               <Link 
-              href='#'
+              href='/Rules'
                px={2}
                py={1}
                rounded={'full'}
                _hover={{
                  textDecoration: 'none',
-                 bg: useColorModeValue('red.400', 'red.500'),
-               }}>Services</Link>
+                 bg: useColorModeValue('orange.600', 'orange.600'),
+               }}>Rules</Link>
               <Link 
-                href='#'
+                href='/Bot'
                 px={2}
                 py={1}
                 rounded={'full'}
                 _hover={{
                   textDecoration: 'none',
-                  bg: useColorModeValue('red.400', 'red.500'),
-                }}>Gallery</Link>
+                  bg: useColorModeValue('orange.600', 'orange.600'),
+                }}>Ref Bot</Link>
                  <Link 
-                href='#'
+                href='/Contact'
                 px={2}
                 py={1}
                 rounded={'full'}
                 _hover={{
                   textDecoration: 'none',
-                  bg: useColorModeValue('red.400', 'red.500'),
+                  bg: useColorModeValue('orange.600', 'orange.600'),
                 }}>Contact</Link>
                 
                 
@@ -99,7 +98,7 @@ export default function Navbar() {
           </HStack>
           <Flex alignItems={'center'}>
            
-            {/* Jotform link */}
+            {/* Unused Link buttons link 
               <Link href='#' target='_blank'>
                 <Button
                   variant={'outline'}
@@ -122,6 +121,7 @@ export default function Navbar() {
                   Contact Us
                 </Button>
               </Link>
+              */}
           </Flex>
         </Flex>
 
@@ -136,8 +136,8 @@ export default function Navbar() {
                     rounded={'full'}
                     _hover={{
                    textDecoration: 'none',
-                   
-                   bg: useColorModeValue('gray.400', 'gray.500'),
+              
+                   bg: useColorModeValue('gray.500', 'gray.500'),
                  }}>Home</Link>
 
             <Link 
@@ -148,7 +148,7 @@ export default function Navbar() {
                     _hover={{
                    textDecoration: 'none',
                    
-                   bg: useColorModeValue('gray.400', 'gray.500'),
+                   bg: useColorModeValue('gray.500', 'gray.500'),
                  }}>Contact</Link>
             <Link 
               href='#'
@@ -157,7 +157,7 @@ export default function Navbar() {
                rounded={'full'}
                _hover={{
                  textDecoration: 'none',
-                 bg: useColorModeValue('gray.400', 'gray.500'),
+                 bg: useColorModeValue('gray.500', 'gray.500'),
                }}>Services</Link>
               <Link 
                 href='#'
@@ -166,7 +166,7 @@ export default function Navbar() {
                 rounded={'full'}
                 _hover={{
                   textDecoration: 'none',
-                  bg: useColorModeValue('gray.400', 'gray.500'),
+                  bg: useColorModeValue('gray.500', 'gray.500'),
                 }}>Gallery</Link>
             
                 
