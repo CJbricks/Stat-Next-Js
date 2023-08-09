@@ -131,7 +131,7 @@ export default function Header() {
                   {/* If box background is active change Stack > top=50% */}
 
                 {/*<Box w={['90%', '90%', 'full']} bg={'gray.100'} opacity={'85%'} p={5} position={'absolute'} z-index={-1} borderRadius={'20px'} boxShadow='-1px 3px 10px 0px rgba(0,0,0,0.75)'>*/}
-                  <Heading color={'orange.500'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} fontWeight={700} bg={[null, 'gray.800']} p={2} borderRadius={'5px'}>
+                  <Heading color={'orange.400'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} fontWeight={700} bg={[null, 'gray.200']} p={2} borderRadius={'5px'}>
                     {card.title}
                   </Heading>
                   <Text color={'white'} fontSize={{ base: 'sm', lg: 'md' }} fontWeight={600} p={[4, 0, 0]}>
