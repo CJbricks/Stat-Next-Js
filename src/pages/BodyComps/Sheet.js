@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useRef, useEffect }from 'react'
 import { Image, Box, Flex } from '@chakra-ui/react'
 
 export default function Sheet() {

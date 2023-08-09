@@ -83,6 +83,8 @@ export default function Navbar() {
                   textDecoration: 'none',
                   bg: useColorModeValue('orange.600', 'orange.600'),
                 }}>Ref Bot</Link>
+
+                {/* -- Archive button will go here --
                  <Link 
                 href='/Contact'
                 px={2}
@@ -91,7 +93,7 @@ export default function Navbar() {
                 _hover={{
                   textDecoration: 'none',
                   bg: useColorModeValue('orange.600', 'orange.600'),
-                }}>Contact</Link>
+                }}>Archive</Link> */}
                 
                 
             </HStack>
@@ -149,7 +151,7 @@ export default function Navbar() {
                    textDecoration: 'none',
                    
                    bg: useColorModeValue('gray.500', 'gray.500'),
-                 }}>Contact</Link>
+                 }}>Rules</Link>
             <Link 
               href='#'
                px={2}
@@ -158,7 +160,10 @@ export default function Navbar() {
                _hover={{
                  textDecoration: 'none',
                  bg: useColorModeValue('gray.500', 'gray.500'),
-               }}>Services</Link>
+               }}>RefBot</Link>
+
+
+               {/*  -- Archive will go here -- 
               <Link 
                 href='#'
                 px={2}
@@ -167,7 +172,7 @@ export default function Navbar() {
                 _hover={{
                   textDecoration: 'none',
                   bg: useColorModeValue('gray.500', 'gray.500'),
-                }}>Gallery</Link>
+                }}>Archive</Link> */}
             
                 
             </Stack>
