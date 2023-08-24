@@ -130,8 +130,8 @@ export default function Form() {
       
        {/* Contact form */}       
         <Box
-          bg="gray.300"
-          color="white"
+          bg="orange.100"
+          color='orange.900'
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 8 }}
           p={{ sm: 5, md: 5, lg: 14 }}>
@@ -147,9 +147,9 @@ export default function Form() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="gray.800"
+                        color="orange.900"
                         _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdSportsBaseball color='white' size="20px" />}>
+                        leftIcon={<MdSportsBaseball color='orange.900' size="20px" />}>
                         {factOne}
                       </Button>
                       <Button
@@ -157,9 +157,9 @@ export default function Form() {
                         height="48px"
                         width="275px"
                         variant="ghost"
-                        color="gray.800"
+                        color="orange.900"
                         _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<GiBaseballGlove color='white' size="20px" />}>
+                        leftIcon={<GiBaseballGlove color='orange.900' size="20px" />}>
                         {factTwo}
                       </Button>
                       <Button
@@ -167,9 +167,9 @@ export default function Form() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="gray.800"
+                        color="orange.900"
                         _hover={{ border: '2px solid #1C6FEB' }}
-                        leftIcon={<MdLocationOn color='white' size="20px" />}>
+                        leftIcon={<MdLocationOn color='orange.900' size="20px" />}>
                        {currentTeam}
                       </Button>
                     </VStack>
@@ -187,7 +187,7 @@ export default function Form() {
                       _hover={{ bg: '#0D74FF' }}
                       icon={<MdFacebook size="28px" />}
                     />
-                    <Link href='https://github.com/cjbricks'>
+                    <Link href='https://github.com/cjbricks' target="_blank">
                     <IconButton
                       aria-label="github"
                       variant="ghost"

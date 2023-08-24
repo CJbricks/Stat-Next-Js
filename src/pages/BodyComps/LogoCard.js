@@ -17,7 +17,7 @@ export default function LogoCard(props) {
             justify={'center'} 
             m={6} 
             p={8} 
-            bg={'gray.200'}
+            
             borderRadius={'50px'}>
               { props.logos.map((logo) => (
 
