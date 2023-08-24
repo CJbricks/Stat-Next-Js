@@ -33,7 +33,6 @@ export default function Body() {
 */}
 
   return (
-
     <>
     
     <Navbar />
