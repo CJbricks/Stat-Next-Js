@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Flex, Stack, Text, Heading } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import styles from '@/styles/Home.module.css'
 
 
 export default function LogoCard(props) {
@@ -27,6 +28,7 @@ export default function LogoCard(props) {
                     width={200}
                     heigth={200}
                     alt="archived-image" 
+                    className={styles.fade}
                      />
               
                   ))

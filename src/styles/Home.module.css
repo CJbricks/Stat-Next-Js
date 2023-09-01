@@ -4,3 +4,20 @@
     flex-wrap: wrap;
     width: 100%;
 }
+
+.fade {
+    animation: fadeIn ease 6s;
+    -webkit-animation: fadeIn ease 6s;
+  -moz-animation: fadeIn ease 6s;
+  -o-animation: fadeIn ease 6s;
+  -ms-animation: fadeIn ease 6s;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

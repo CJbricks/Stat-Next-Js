@@ -22,6 +22,7 @@ import { BiMenu } from 'react-icons/bi'
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const botPressUrl = 'https://mediafiles.botpress.cloud/6adda225-9751-4969-be00-30b5847e64f0/webchat/bot.html'
 
   return (
     <>
@@ -75,7 +76,8 @@ export default function Navbar() {
                  bg: useColorModeValue('orange.600', 'orange.600'),
                }}>Rules</Link>
               <Link 
-                href='/Bot'
+                href={botPressUrl}
+                target='_blank'
                 px={2}
                 py={1}
                 rounded={'full'}
