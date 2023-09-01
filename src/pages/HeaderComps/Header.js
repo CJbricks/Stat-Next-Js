@@ -42,13 +42,13 @@ export default function Header() {
     {
       title: 'Stat Sheet',
       text:
-        "A baseball trivia game based on Baseball Reference statistics."
+        "A baseball trivia game based on Baseball Reference statistics & Inspired by Jomboy media."
       
     },
     {
       title: 'How to play',
       text:
-        ""
+        "Guess the player's first and last name based on the Baseball Reference sheet and any hints given!"
       
     },
     {
