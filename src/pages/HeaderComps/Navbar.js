@@ -67,7 +67,7 @@ export default function Navbar() {
                    bg: useColorModeValue('orange.600', 'orange.600'),
                  }}>Home</Link>
               <Link 
-              href='/Rules'
+              href='/BodyComps/Rules'
                px={2}
                py={1}
                rounded={'full'}
@@ -145,7 +145,7 @@ export default function Navbar() {
                  }}>Home</Link>
 
             <Link 
-                    href='#'
+                    href='/BodyComps/Rules'
                     px={2}
                     py={1}
                     rounded={'full'}
@@ -155,7 +155,7 @@ export default function Navbar() {
                    bg: useColorModeValue('gray.500', 'gray.500'),
                  }}>Rules</Link>
             <Link 
-              href='#'
+              href={botPressUrl}
                px={2}
                py={1}
                rounded={'full'}

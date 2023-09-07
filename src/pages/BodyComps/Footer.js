@@ -59,7 +59,7 @@ const SocialButton = ({
 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2} color={'red.600'}>
+    <Text fontWeight={'500'} fontSize={'lg'} mb={2} color={'brand.600'}>
       {children}
     </Text>
   );
@@ -100,7 +100,7 @@ export default function Footer() {
               <Logo color={useColorModeValue('gray.700', 'white')} />
             </Box>
             <Text fontSize={'sm'}>
-              © 2023 Brick By Brick Design.
+              © 2023 Bricks Design Haus Design.
               <br /> 
               All rights reserved
               <br />
@@ -113,9 +113,6 @@ export default function Footer() {
               <SocialButton label={'Instagram'} href={'https://instagram.com/oreo.blizman'}>
                 <FaInstagram />
               </SocialButton>
-              <SocialButton label={'Flickr'} href={'https://flickr.com/photos/198751376@N08/'}>
-                <FaFlickr />
-              </SocialButton>
               <SocialButton label={'Email'} href={'mailto:cj.christian.web@gmail.com'}>
                 <FaLaptop />
               </SocialButton>
@@ -124,24 +121,20 @@ export default function Footer() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
-            <Link href={'https://www.cjchristian.com/about-1'} target="_blank">About</Link>
+            <Link href={'/BodyComps/Rules'} target="_blank">About</Link>
             <Link href={'/ContactPage'}>Contact</Link>
-            <Link href={'/Services'}>Services</Link>
             
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Support</ListHeader>
-            <Link href={'mailto:cj.christian.web@gmail.com'} target='_blank'>Help Center</Link>
-            <Link href={'/Services'}>Resources</Link>
-            <Link href={'/GalleryMain'}>Gallery</Link>
-            <Link href={'mailto:cj.christian.web@gmail.com'}>Commission Work</Link>
+            <Link href={'mailto:cj.christian.web@gmail.com'} target='_blank'>Help</Link>
+            <Link href={'https://baseball-reference.com'}>Resources</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Related Sites</ListHeader>
-            <Link href={'https://www.cjchristian.com'} target='_blank'>Fine Art</Link>
-            <Link href={'https:/daybreak-beta.vercel.app'} target='_blank'>Daybreak Print</Link>
-            <Link href={'https://flickr.com/photos/198751376@N08/'} target="_blank">Photo Stream</Link>
-            <Link href={'#'}>Fine Art CV</Link>
+            <Link href={'https://bbb-design.vercel.app'} target='_blank'>Bricks Design Haus</Link>
+            <Link href={'https://baseball-reference.com'} target='_blank'>Baseball Reference</Link>
+            <Link href={'https://jomboymedia.com'} target="_blank">Jomboy Media <br /> (not affiliated)</Link>
           </Stack>
       
           <Stack align={'flex-start'}>
@@ -159,10 +152,10 @@ export default function Footer() {
               />
               
               <IconButton
-                bg={useColorModeValue('red.500', 'red.500')}
+                bg={useColorModeValue('brand.700')}
                 color={useColorModeValue('gray.800')}
                 _hover={{
-                  bg: 'red.600',
+                  bg: 'brand.900',
                 }}
                 aria-label="Subscribe"
                 icon={<BiMailSend />}

@@ -1,6 +1,6 @@
 import React from 'react'
 'use client'
-
+import Link from 'next/link'
 import {
   Box,
   Button,
@@ -11,6 +11,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Highlight
 } from '@chakra-ui/react'
 import {
   FcAbout,
@@ -70,12 +71,14 @@ export default function Rules() {
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-          Short heading
+          A quick introduction to Stat Sheet.
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
+          <Highlight query={'LOVE BASEBALL'} styles={{}}>
           The story behind this game is short and sweet. My wife and I love Jomboy media and we LOVE BASEBALL. I created this game to 
-          pass some time and improve my Javascript skills and so my wife could play our own version of RefGuess in our free time. The Og game is basic HTML/CSS/JS and I will link in the footer.
-          
+          </Highlight>
+          pass some time and improve my Javascript skills and so my wife could play our own version of RefGuess in our free time. The Og game is basic HTML/CSS/JS and can be found <Link href={'https://stat-tay.surge.sh'}>Here.</Link>
+         
         </Text>
       </Stack>
 
